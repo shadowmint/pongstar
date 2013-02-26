@@ -1,0 +1,9 @@
+The majority of this code is under the Apache public license, see LICENSE.CODE.
+
+Some parts are under a compatible MIT, etc. license, specifically those sections found
+in utils/Assets/utils/n/Core/External/, which are governed by the license details 
+specified in individual files. Notably, these are all free for any use. See the 
+individual licenses for more details.
+
+The assets associated with this project are under the Creative Commons - Share-ALike
+license, see LICENSE.MEDIA.

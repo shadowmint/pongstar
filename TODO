@@ -1,0 +1,33 @@
+-- Actual game
+X Get a real font for the app
+X Replace the top ui with something a bit nicer
+XX Replace content
+XX Replace UI banner
+X Move the bottom paddle up a bit and add a notice there
+X Make the win message better on the win screen
+X Make the lose message better on the win screen
+X Add a high score header to the win screen
+X Add credits to the win screen
+X Make high scores actually work
+X Add some stars to the win screen
+X Better fixed width font
+
+-- Sounds
+X Add a ding sound when you collect stars
+X Add win sound
+X Add lose sound
+X Add background music
+
+-- Deploy
+X License file
+- Remote utils as submodule
+- Upload to github
+- Build proper binary
+- Play store icon
+  512x512
+  48x48
+  180x120 promo image
+  1024x500 feature graphic (924x400)
+X Play store screenshots
+- Play store description
+- Upload to play store

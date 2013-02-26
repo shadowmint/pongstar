@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+	<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+	<ProductVersion>10.0.20506</ProductVersion>
+	<SchemaVersion>2.0</SchemaVersion>
+	<ProjectGuid>{05E3AC3F-B7E7-C745-4DCB-C337C4CCC0BB}</ProjectGuid>
+	<OutputType>Library</OutputType>
+	<AppDesignerFolder>Properties</AppDesignerFolder>
+	<RootNamespace></RootNamespace>
+	<AssemblyName>Assembly-CSharp</AssemblyName>
+	<TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+	<FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+	<DebugSymbols>true</DebugSymbols>
+	<DebugType>full</DebugType>
+	<Optimize>false</Optimize>
+	<OutputPath>Temp\bin\Debug\</OutputPath>
+	<DefineConstants>DEBUG;TRACE;UNITY_STANDALONE;ENABLE_MICROPHONE;ENABLE_IMAGEEFFECTS;ENABLE_WEBCAM;ENABLE_AUDIO_FMOD;ENABLE_NETWORK;ENABLE_MONO;ENABLE_PHYSICS;ENABLE_TERRAIN;ENABLE_CACHING;ENABLE_SUBSTANCE;ENABLE_GENERICS;ENABLE_CLOTH;ENABLE_MOVIES;ENABLE_AUDIO;ENABLE_WWW;ENABLE_SHADOWS;ENABLE_DUCK_TYPING;UNITY_4_0_1;UNITY_4_0;UNITY_STANDALONE_OSX;ENABLE_PROFILER;UNITY_EDITOR</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+	<DebugType>pdbonly</DebugType>
+	<Optimize>true</Optimize>
+	<OutputPath>Temp\bin\Release\</OutputPath>
+	<DefineConstants>TRACE</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+	<Reference Include="System" />
+    <Reference Include="System.XML" />
+	<Reference Include="System.Core" />
+	<Reference Include="UnityEngine">
+	  <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEngine.dll</HintPath>
+	</Reference>
+	<Reference Include="UnityEditor">
+	  <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEditor.dll</HintPath>
+	</Reference>
+  </ItemGroup>
+  <ItemGroup>
+     <Compile Include="Assets\Ps\Controllers\GameController.cs" />
+     <Compile Include="Assets\Ps\Model\AI\CheatAiProfile.cs" />
+     <Compile Include="Assets\Ps\Model\AI\EasyAiProfile.cs" />
+     <Compile Include="Assets\Ps\Model\AI\HardAiProfile.cs" />
+     <Compile Include="Assets\Ps\Model\AI\IProfile.cs" />
+     <Compile Include="Assets\Ps\Model\Actions\Game.cs" />
+     <Compile Include="Assets\Ps\Model\Actions\Sparkles.cs" />
+     <Compile Include="Assets\Ps\Model\Config.cs" />
+     <Compile Include="Assets\Ps\Model\EventBinding.cs" />
+     <Compile Include="Assets\Ps\Model\EventHandler.cs" />
+     <Compile Include="Assets\Ps\Model\Events\CollectableHit.cs" />
+     <Compile Include="Assets\Ps\Model\Events\IAction.cs" />
+     <Compile Include="Assets\Ps\Model\Events\ID.cs" />
+     <Compile Include="Assets\Ps\Model\Events\PaddleHit.cs" />
+     <Compile Include="Assets\Ps\Model\Events\PlayerInput.cs" />
+     <Compile Include="Assets\Ps\Model\Events\WallHit.cs" />
+     <Compile Include="Assets\Ps\Model\GameInput.cs" />
+     <Compile Include="Assets\Ps\Model\GameState.cs" />
+     <Compile Include="Assets\Ps\Model\GameStateFactory.cs" />
+     <Compile Include="Assets\Ps\Model\GameStateViewModel.cs" />
+     <Compile Include="Assets\Ps\Model\IEventData.cs" />
+     <Compile Include="Assets\Ps\Model\Object\Ball.cs" />
+     <Compile Include="Assets\Ps\Model\Object\Collectables.cs" />
+     <Compile Include="Assets\Ps\Model\Object\Data\HighScore.cs" />
+     <Compile Include="Assets\Ps\Model\Object\DrawableModel.cs" />
+     <Compile Include="Assets\Ps\Model\Object\Field.cs" />
+     <Compile Include="Assets\Ps\Model\Object\Flare.cs" />
+     <Compile Include="Assets\Ps\Model\Object\Paddle.cs" />
+     <Compile Include="Assets\Ps\Model\Object\Rainbow\ForeverAnim.cs" />
+     <Compile Include="Assets\Ps\Model\Object\Rainbow\RainbowSparkAnim.cs" />
+     <Compile Include="Assets\Ps\Model\Object\Rainbow\RainbowSparkles.cs" />
+     <Compile Include="Assets\Ps\Model\Object\Rainbow\RainbowTrailManager.cs" />
+     <Compile Include="Assets\Ps\Model\Object\Rainbow\nTrail.cs" />
+     <Compile Include="Assets\Ps\Model\Object\RainbowTrail.cs" />
+     <Compile Include="Assets\Ps\Model\Object\Sparkle.cs" />
+     <Compile Include="Assets\Ps\Model\Object\Sparkle\Spark.cs" />
+     <Compile Include="Assets\Ps\Model\Object\Sparkle\SparkAnim.cs" />
+     <Compile Include="Assets\Ps\Model\Object\Sparkle\SparkFactory.cs" />
+     <Compile Include="Assets\Ps\Model\Score.cs" />
+     <Compile Include="Assets\Ps\Model\UI\LPack.cs" />
+     <Compile Include="Assets\Ps\Model\UI\UITools.cs" />
+     <Compile Include="Assets\Ps\Model\UIStateViewModel.cs" />
+     <Compile Include="Assets\Ps\Pongstar.cs" />
+     <Compile Include="Assets\Ps\Views\Game\Index.cs" />
+     <Compile Include="Assets\Ps\Views\Game\Scoreboard.cs" />
+     <Compile Include="Assets\Tests\Model\EventHandlerTests.cs" />
+     <Compile Include="Assets\Tests\Model\StateFactoryTests.cs" />
+     <Compile Include="Assets\Tests\TestSuite.cs" />
+     <Compile Include="Assets\utils\Tests\n\App\MyRecordType.cs" />
+     <Compile Include="Assets\utils\Tests\n\App\nDbRecordTests.cs" />
+     <Compile Include="Assets\utils\Tests\n\Gfx\nBoxTests.cs" />
+     <Compile Include="Assets\utils\Tests\n\Helper\Geom\nQuadTests.cs" />
+     <Compile Include="Assets\utils\Tests\n\Helper\nMotionVectorTests.cs" />
+     <Compile Include="Assets\utils\Tests\n\Platform\Db\Impl\CookieDbContainerTests.cs" />
+     <Compile Include="Assets\utils\Tests\n\Platform\Db\Impl\FileDbContainerTests.cs" />
+     <Compile Include="Assets\utils\Tests\n\Platform\Db\MyDbRecordType.cs" />
+     <Compile Include="Assets\utils\Tests\n\Platform\Db\RecordSerializerTests.cs" />
+     <Compile Include="Assets\utils\Tests\n\Platform\Db\nUnityDbTests.cs" />
+     <Compile Include="Assets\utils\Tests\n\Platform\TestLogWriterTests.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Collision\Collision.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Collision\Distance.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Collision\DynamicTree.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Collision\DynamicTreeBroadPhase.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Collision\IBroadPhase.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Collision\QuadTree.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Collision\QuadTreeBroadPhase.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Collision\Shapes\ChainShape.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Collision\Shapes\CircleShape.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Collision\Shapes\EdgeShape.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Collision\Shapes\PolygonShape.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Collision\Shapes\Shape.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Collision\TimeOfImpact.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Common\ConvexHull\ChainHull.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Common\ConvexHull\GiftWrap.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Common\ConvexHull\Melkman.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Common\Curve.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Common\CurveKey.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Common\CurveKeyCollection.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Common\Decomposition\BayazitDecomposer.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Common\Decomposition\CDT\Delaunay\DelaunayTriangle.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Common\Decomposition\CDT\Delaunay\Sweep\AdvancingFront.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Common\Decomposition\CDT\Delaunay\Sweep\AdvancingFrontNode.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Common\Decomposition\CDT\Delaunay\Sweep\DTSweep.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Common\Decomposition\CDT\Delaunay\Sweep\DTSweepConstraint.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Common\Decomposition\CDT\Delaunay\Sweep\DTSweepContext.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Common\Decomposition\CDT\Delaunay\Sweep\DTSweepPointComparator.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Common\Decomposition\CDT\Delaunay\Sweep\PointOnEdgeException.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Common\Decomposition\CDT\ITriangulatable.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Common\Decomposition\CDT\Orientation.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Common\Decomposition\CDT\Polygon\Polygon.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Common\Decomposition\CDT\Polygon\PolygonPoint.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Common\Decomposition\CDT\Polygon\PolygonSet.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Common\Decomposition\CDT\Sets\ConstrainedPointSet.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Common\Decomposition\CDT\Sets\PointSet.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Common\Decomposition\CDT\TriangulationConstraint.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Common\Decomposition\CDT\TriangulationContext.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Common\Decomposition\CDT\TriangulationMode.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Common\Decomposition\CDT\TriangulationPoint.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Common\Decomposition\CDT\TriangulationUtil.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Common\Decomposition\CDT\Util\FixedArray3.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Common\Decomposition\CDT\Util\FixedBitArray3.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Common\Decomposition\CDT\Util\PointGenerator.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Common\Decomposition\CDT\Util\PolygonGenerator.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Common\Decomposition\CDTDecomposer.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Common\Decomposition\EarclipDecomposer.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Common\Decomposition\FlipcodeDecomposer.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Common\Decomposition\Seidel\Edge.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Common\Decomposition\Seidel\MonotoneMountain.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Common\Decomposition\Seidel\Node.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Common\Decomposition\Seidel\Point.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Common\Decomposition\Seidel\QueryGraph.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Common\Decomposition\Seidel\Sink.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Common\Decomposition\Seidel\Trapezoid.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Common\Decomposition\Seidel\TrapezoidalMap.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Common\Decomposition\Seidel\Triangulator.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Common\Decomposition\Seidel\XNode.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Common\Decomposition\Seidel\YNode.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Common\Decomposition\SeidelDecomposer.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Common\FixedArray.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Common\HashSet.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Common\LineTools.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Common\Math.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Common\MathHelper.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Common\Matrix.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Common\Path.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Common\PathManager.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Common\PhysicsLogic\Explosion.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Common\PhysicsLogic\PhysicsLogic.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Common\PolygonManipulation\CuttingTools.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Common\PolygonManipulation\SimpleCombiner.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Common\PolygonManipulation\SimplifyTools.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Common\PolygonManipulation\YuPengClipper.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Common\PolygonTools.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Common\Serialization.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Common\TextureTools\MSTerrain.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Common\TextureTools\MarchingSquares.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Common\TextureTools\TextureConverter.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Common\Vector2.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Common\Vector3.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Common\Vertices.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Controllers\AbstractForceController.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Controllers\BuoyancyController.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Controllers\Controller.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Controllers\GravityController.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Controllers\SimpleWindForce.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Controllers\VelocityLimitController.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\ConvertUnits.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\DebugViewBase.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Dynamics\Body.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Dynamics\BreakableBody.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Dynamics\ContactManager.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Dynamics\Contacts\Contact.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Dynamics\Contacts\ContactSolver.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Dynamics\Fixture.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Dynamics\Island.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Dynamics\Joints\AngleJoint.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Dynamics\Joints\DistanceJoint.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Dynamics\Joints\FixedAngleJoint.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Dynamics\Joints\FixedMouseJoint.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Dynamics\Joints\FrictionJoint.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Dynamics\Joints\GearJoint.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Dynamics\Joints\JointType.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Dynamics\Joints\MotorJoint.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Dynamics\Joints\PrismaticJoint.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Dynamics\Joints\PulleyJoint.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Dynamics\Joints\RevoluteJoint.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Dynamics\Joints\RopeJoint.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Dynamics\Joints\SliderJoint.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Dynamics\Joints\WeldJoint.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Dynamics\Joints\WheelJoint.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Dynamics\TimeStep.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Dynamics\World.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Dynamics\WorldCallbacks.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Factories\BodyFactory.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Factories\FixtureFactory.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Factories\JointFactory.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Factories\LinkFactory.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Fluids\FluidDefinition.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Fluids\FluidParticle.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Fluids\FluidSystem.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Fluids\FluidSystem2.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Fluids\HashGrid.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Fluids\SpartialTable.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Fluids\Spring.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Fluids\SpringHash.cs" />
+     <Compile Include="Assets\utils\n\Core\External\Farseer\Settings.cs" />
+     <Compile Include="Assets\utils\n\Core\External\TargaImage.cs" />
+     <Compile Include="Assets\utils\n\Core\External\TinyIoC.cs" />
+     <Compile Include="Assets\utils\n\Core\Platform\db\Crypto.cs" />
+     <Compile Include="Assets\utils\n\Core\Platform\db\DbTable.cs" />
+     <Compile Include="Assets\utils\n\Core\Platform\db\IDbContainer.cs" />
+     <Compile Include="Assets\utils\n\Core\Platform\db\RecordSerializer.cs" />
+     <Compile Include="Assets\utils\n\Core\Platform\db\impl\AsyncBrowserComms.cs" />
+     <Compile Include="Assets\utils\n\Core\Platform\db\impl\CookieDbContainer.cs" />
+     <Compile Include="Assets\utils\n\Core\Platform\db\impl\FileDbContainer.cs" />
+     <Compile Include="Assets\utils\n\Core\Platform\nContext.cs" />
+     <Compile Include="Assets\utils\n\Core\Platform\nDb.cs" />
+     <Compile Include="Assets\utils\n\Core\Platform\nDispatcher.cs" />
+     <Compile Include="Assets\utils\n\Core\Platform\nLogWriter.cs" />
+     <Compile Include="Assets\utils\n\Core\Platform\nUnityBinding.cs" />
+     <Compile Include="Assets\utils\n\Core\Platform\nUnityContext.cs" />
+     <Compile Include="Assets\utils\n\Core\Platform\nUnityDb.cs" />
+     <Compile Include="Assets\utils\n\Core\Platform\nUnityDispatcher.cs" />
+     <Compile Include="Assets\utils\n\Core\Platform\nUnityLogWriter.cs" />
+     <Compile Include="Assets\utils\n\Core\Test\Writers\nDebugTestWriter.cs" />
+     <Compile Include="Assets\utils\n\Core\Test\Writers\nSimpleTestWriter.cs" />
+     <Compile Include="Assets\utils\n\Core\Test\nAssert.cs" />
+     <Compile Include="Assets\utils\n\Core\Test\nTest.cs" />
+     <Compile Include="Assets\utils\n\Core\Test\nTestBase.cs" />
+     <Compile Include="Assets\utils\n\Core\Test\nTestLogWriter.cs" />
+     <Compile Include="Assets\utils\n\Core\Test\nTestResult.cs" />
+     <Compile Include="Assets\utils\n\Core\Test\nTestResultSet.cs" />
+     <Compile Include="Assets\utils\n\Core\Test\nTestRunner.cs" />
+     <Compile Include="Assets\utils\n\Core\Test\nTestSuite.cs" />
+     <Compile Include="Assets\utils\n\Core\Test\nTestWriter.cs" />
+     <Compile Include="Assets\utils\n\Core\nApp.cs" />
+     <Compile Include="Assets\utils\n\Core\nController.cs" />
+     <Compile Include="Assets\utils\n\Core\nDbRecord.cs" />
+     <Compile Include="Assets\utils\n\Core\nDbRecordError.cs" />
+     <Compile Include="Assets\utils\n\Core\nDbRecordErrors.cs" />
+     <Compile Include="Assets\utils\n\Core\nDbRecordField.cs" />
+     <Compile Include="Assets\utils\n\Core\nDbRecordFieldType.cs" />
+     <Compile Include="Assets\utils\n\Core\nLog.cs" />
+     <Compile Include="Assets\utils\n\Core\nModel.cs" />
+     <Compile Include="Assets\utils\n\Core\nRand.cs" />
+     <Compile Include="Assets\utils\n\Core\nResolver.cs" />
+     <Compile Include="Assets\utils\n\Core\nStateFactory.cs" />
+     <Compile Include="Assets\utils\n\Events\EventBinding.cs" />
+     <Compile Include="Assets\utils\n\Events\EventHandler.cs" />
+     <Compile Include="Assets\utils\n\Events\nIEvent.cs" />
+     <Compile Include="Assets\utils\n\Gfx\Anim\nIAnim.cs" />
+     <Compile Include="Assets\utils\n\Gfx\Anim\nMotion.cs" />
+     <Compile Include="Assets\utils\n\Gfx\Anim\nMotionGroup.cs" />
+     <Compile Include="Assets\utils\n\Gfx\Anim\nSpriteGroup.cs" />
+     <Compile Include="Assets\utils\n\Gfx\Impl\nDataArray.cs" />
+     <Compile Include="Assets\utils\n\Gfx\Impl\nRenderer.cs" />
+     <Compile Include="Assets\utils\n\Gfx\Impl\nSpriteData.cs" />
+     <Compile Include="Assets\utils\n\Gfx\Impl\nSpriteMesh.cs" />
+     <Compile Include="Assets\utils\n\Gfx\Impl\nSpriteMeshFactory.cs" />
+     <Compile Include="Assets\utils\n\Gfx\Impl\nSpriteTags.cs" />
+     <Compile Include="Assets\utils\n\Gfx\Old\UI\nButton.cs" />
+     <Compile Include="Assets\utils\n\Gfx\Old\nInputHandler.cs" />
+     <Compile Include="Assets\utils\n\Gfx\Old\nLayer.cs" />
+     <Compile Include="Assets\utils\n\Gfx\Old\nProp.cs" />
+     <Compile Include="Assets\utils\n\Gfx\Old\nQuad.cs" />
+     <Compile Include="Assets\utils\n\Gfx\Old\nSpirit.cs" />
+     <Compile Include="Assets\utils\n\Gfx\Old\nStrip.cs" />
+     <Compile Include="Assets\utils\n\Gfx\Old\nText.cs" />
+     <Compile Include="Assets\utils\n\Gfx\nBackground.cs" />
+     <Compile Include="Assets\utils\n\Gfx\nBox.cs" />
+     <Compile Include="Assets\utils\n\Gfx\nCamera.cs" />
+     <Compile Include="Assets\utils\n\Gfx\nGraphicsPipe.cs" />
+     <Compile Include="Assets\utils\n\Gfx\nIDrawable.cs" />
+     <Compile Include="Assets\utils\n\Gfx\nQuad.cs" />
+     <Compile Include="Assets\utils\n\Gfx\nSprite.cs" />
+     <Compile Include="Assets\utils\n\Utils\Geom\nGLine.cs" />
+     <Compile Include="Assets\utils\n\Utils\Geom\nGQuad.cs" />
+     <Compile Include="Assets\utils\n\Utils\nAudio.cs" />
+     <Compile Include="Assets\utils\n\Utils\nImage.cs" />
+     <Compile Include="Assets\utils\n\Utils\nLayout.cs" />
+     <Compile Include="Assets\utils\n\Utils\nMotionVector.cs" />
+     <None Include="Assets\utils\shaders\nPropShader.shader" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+	   Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions xmlns="http://schemas.microsoft.com/developer/msbuild/2003"><MonoDevelop><Properties><Policies><TextStylePolicy FileWidth="120" TabWidth="2" IndentWidth="2" NoTabsAfterNonTabs="True" EolMarker="Unix" inheritsSet="VisualStudio" inheritsScope="text/plain" scope="text/x-csharp" /><CSharpFormattingPolicy IndentSwitchBody="True" MethodBraceStyle="EndOfLine" ConstructorBraceStyle="EndOfLine" BeforeMethodDeclarationParentheses="False" BeforeMethodCallParentheses="False" BeforeConstructorDeclarationParentheses="False" BeforeDelegateDeclarationParentheses="False" NewParentheses="False" inheritsSet="Mono" inheritsScope="text/x-csharp" scope="text/x-csharp" /></Policies></Properties></MonoDevelop></ProjectExtensions>
+
+</Project>
