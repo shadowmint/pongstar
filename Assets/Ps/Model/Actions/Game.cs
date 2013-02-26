@@ -52,6 +52,12 @@ namespace Ps.Model.Actions
     public static int MUSIC_CHANNEL = 3;
     public static int MUSIC_0 = 1;
 
+    /* Bounce channel */
+    public static int BOUNCE_CHANNEL = 4;
+    public static int WALL_BOUNCE = 1;
+    public static int PLAYER_BOUNCE = 2;
+    public static int AI_BOUNCE = 3;
+
     public static void SetupAudio(nAudio a) {
       if (!_soundReady) {
         _bop = (AudioClip)Resources.Load("audio/bop");
@@ -91,6 +97,11 @@ namespace Ps.Model.Actions
       }
     }
 
+    /** Check if nothing is playing */
+    private static bool NoBounce() {
+      return !_playerAudio.isPlaying && !_aiAudio.isPlaying && !_wallAudio.isPlaying;
+    }
+
     /** Reset sound state */
     public static void SoundReset() {
       _soundReady = false;
@@ -119,7 +130,7 @@ namespace Ps.Model.Actions
       else {
         raw.State.Score.Update(Config.PointsPerBounce, "Bounce!");
         if (_wallAudio == null) SetupAudio(data.State.Audio);
-        if (!_aiAudio.isPlaying && !_playerAudio.isPlaying)
+        if (NoBounce())
           _wallAudio.Play();
       }
     }
@@ -128,13 +139,14 @@ namespace Ps.Model.Actions
       var data = (PaddleHit)raw;
       if (data.Target == data.State.PlayerPaddle) {
         raw.State.Score.Update(Config.PointsPerPaddleBounce, "Deflected!");
-        if (_playerAudio == null)
-          SetupAudio(data.State.Audio);
-        _playerAudio.Play();
+        if (_playerAudio == null) SetupAudio(data.State.Audio);
+        if (NoBounce())
+          _playerAudio.Play();
       } 
       else {
         if (_aiAudio == null) SetupAudio(data.State.Audio);
-        _aiAudio.Play();
+        if (NoBounce())
+          _aiAudio.Play();
       }
     }
 

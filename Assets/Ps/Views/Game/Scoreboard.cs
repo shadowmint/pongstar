@@ -28,6 +28,7 @@ using n.Utils;
 using System.Collections.Generic;
 using Ps.Model.Object;
 using System.Linq;
+using Ps.Model.UI;
 
 namespace Ps.Views.Game
 {
@@ -121,7 +122,11 @@ namespace Ps.Views.Game
         GUI.Label(new Rect(nLayout.Distance(15f), top + offset, nLayout.PaddedFullWidth(15f), 0.5f), data.Msg, data.Style);
       }
 
-      top = offset + nLayout.Distance(30f);
+      if ((Metrics.Android) && (Metrics.Height < 100)) 
+        top = offset + nLayout.Distance(25f);
+      else 
+        top = offset + nLayout.Distance(30f);
+      
       data = LPack.ScoreHighscoreHeader();
       GUI.Label(new Rect(0, top, nLayout.PaddedFullWidth(0), 0.5f), data.Msg, data.Style);
 
@@ -140,14 +145,26 @@ namespace Ps.Views.Game
       GUI.Label(new Rect(nLayout.Distance(10f), top, nLayout.PaddedFullWidth(0), 0.5f), data.Msg, data.Style);
 
       data = LPack.ScoreButton();
-      if (GUI.Button(new Rect(
+      if ((Metrics.Android) && (Metrics.Height < 100)) {
+        if (GUI.Button(new Rect(
+          nLayout.Center(nAxis.X) - nLayout.PaddedFullWidth(10) / 2, 
+          nLayout.Distance(30, nEdge.BOTTOM), 
+          nLayout.PaddedFullWidth(10), 
+          nLayout.Distance(15)),
+          data.Msg, data.Style)) {
+          _controller.Reset();
+          _controller.Index();
+        }
+      } else {
+        if (GUI.Button(new Rect(
         nLayout.Center(nAxis.X) - nLayout.PaddedFullWidth(10) / 2, 
         nLayout.Distance(39, nEdge.BOTTOM), 
         nLayout.PaddedFullWidth(10), 
         nLayout.Distance(20)),
         data.Msg, data.Style)) {
-        _controller.Reset();
-        _controller.Index();
+          _controller.Reset();
+          _controller.Index();
+        }
       }
     }
   }

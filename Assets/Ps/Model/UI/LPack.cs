@@ -24,6 +24,7 @@ using Ps.Model.Object;
 using Ps.Model.Events;
 using n.Utils;
 using Ps.Model.Actions;
+using Ps.Model.UI;
 
 namespace Ps.Model
 {
@@ -170,7 +171,7 @@ namespace Ps.Model
       var font = (Font) Resources.Load("fonts/Droid-Mono");
       var rtn = new GUIStyle();
       rtn.font = font;
-      rtn.fontSize = nLayout.FontSize(mm);
+      rtn.fontSize = FontSize(mm);
       rtn.fontStyle =  FontStyle.Bold;
       rtn.normal.textColor = c;
       return rtn;
@@ -181,7 +182,7 @@ namespace Ps.Model
       var font = (Font) Resources.Load("fonts/Exo-Regular");
       var rtn = new GUIStyle();
       rtn.font = font;
-      rtn.fontSize = nLayout.FontSize(mm);
+      rtn.fontSize = FontSize(mm);
       rtn.normal.textColor = c;
       return rtn;
     }
@@ -191,9 +192,18 @@ namespace Ps.Model
       var font = (Font) Resources.Load("fonts/Exo-Bold");
       var rtn = new GUIStyle();
       rtn.font = font;
-      rtn.fontSize = nLayout.FontSize(mm);
+      rtn.fontSize = FontSize(mm);
       rtn.normal.textColor = c;
       return rtn;
+    }
+
+    public int FontSize(float mm) {
+      if (Metrics.Android) {
+        if (Metrics.Height < 100) {
+          return nLayout.FontSize(mm * 3.0f / 5.0f);
+        }
+      }
+      return nLayout.FontSize(mm);
     }
   }
 }
