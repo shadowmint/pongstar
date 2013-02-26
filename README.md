@@ -1,5 +1,4 @@
-![Pongstar](https://raw.github.com/shadowmint/pongstar/master/media/icon.small.png) Pongstar
-==
+![Pongstar](https://raw.github.com/shadowmint/pongstar/master/media/icon.small.png) 
 
 About
 --
