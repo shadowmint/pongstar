@@ -16,8 +16,4 @@ an android device from the [Google Play Store](https://play.google.com/store/app
 Note that while Unity3D has free licenses for desktop deployment, deploying to mobile devices requires
 a non-free license from the Unity store. That's why there's no iOS build. 
 
-![Pongstar in Action!](https://raw.github.com/shadowmint/pongstar/master/media/320x480.1.png)
-
-- 
-
-![Pongstar in Action!](https://raw.github.com/shadowmint/pongstar/master/media/320x480.2.png)
+![Pongstar in Action!](https://raw.github.com/shadowmint/pongstar/master/media/320x480.1.png) . ![Pongstar in Action!](https://raw.github.com/shadowmint/pongstar/master/media/320x480.2.png)
